@@ -1,0 +1,86 @@
+html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        #panorama {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .fancybox__content
+        {
+            padding: 5px;
+            height: 100% !important;
+            background: #ff000000 !important;
+        }
+        .fancybox__slide {
+            padding: 64px 10px;
+        }
+        /* Fullscreen modal styles */
+        .fullscreen-modal img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            max-height: 80%;
+        }
+        .fullscreen-modal .caption {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        /* Menu styles */
+        #menu {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 10001;
+            transition: all 0.3s;
+            width: 250px;
+            opacity: 1;
+        }
+        #menu.hidden {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        #menu.collapsed {
+            height: 50px;
+            overflow: hidden;
+        }
+        #menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        #menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        #menu-toggle {
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        #menu-toggle:hover {
+            color: #bbb;
+        }
+        .group-title {
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .group-title:hover {
+            color: #bbb;
+        }
+        .bg-dark{
+            background-color: #343a405c !important;
+        }

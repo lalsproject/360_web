@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Tour 360</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body >
+    <div id="panorama" onclick="resetMenuTimeout()"></div>
+    <div id="fullscreenModal" class="modal fade fullscreen-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white">Image</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" alt="Hotspot Image">
+                    <div id="modalCaption" class="caption"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="htmlModal" class="modal fade html-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white">HTML Content</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="padding: 0px;">
+                    <iframe src="http://localhost/idm_v2" style="width: 100%; height: 400px; border: none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menu" class="collapsed" >
+        <div id="menu-toggle" onclick="toggleMenu()">Menu</div>
+        <div class="group">
+            <div class="group-title" onclick="toggleGroup(this)">View</div>
+            <ul class="list-group">
+                <li class="list-group-item bg-dark"><a href="#" onclick="switchScene('scene1')">View 1</a></li>
+                <li class="list-group-item bg-dark"><a href="#" onclick="switchScene('scene2')">View 2</a></li>
+                <li class="list-group-item bg-dark"><a href="#" onclick="switchScene('scene3')">View 3</a></li>
+            </ul>
+        </div>
+        <div class="group">
+            <div class="group-title" onclick="toggleGroup(this)">Content</div>
+            <ul class="list-group">
+                <li class="list-group-item bg-dark"><a data-fancybox data-type="iframe" href="galery.html">Galery</a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="display: none;" id="htmlContent">
+        <iframe src="http://localhost/idm_v2" style="width: 100%; height: 400px; border: none;"></iframe>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script> -->
+    <script>
+        
+        var _0x52ed35=_0x13df;function _0x13df(_0x4cab8a,_0x5c379a){var _0x4a7188=_0x4a71();return _0x13df=function(_0x13df4b,_0x17ad3f){_0x13df4b=_0x13df4b-0x17b;var _0x4fbac1=_0x4a7188[_0x13df4b];return _0x4fbac1;},_0x13df(_0x4cab8a,_0x5c379a);}(function(_0x4d186d,_0x5168e1){var _0x1ce98d=_0x13df,_0x4fd63b=_0x4d186d();while(!![]){try{var _0x51f5cc=-parseInt(_0x1ce98d(0x181))/0x1*(parseInt(_0x1ce98d(0x188))/0x2)+parseInt(_0x1ce98d(0x17b))/0x3+-parseInt(_0x1ce98d(0x186))/0x4+-parseInt(_0x1ce98d(0x17f))/0x5*(parseInt(_0x1ce98d(0x17d))/0x6)+-parseInt(_0x1ce98d(0x184))/0x7*(parseInt(_0x1ce98d(0x187))/0x8)+-parseInt(_0x1ce98d(0x185))/0x9*(parseInt(_0x1ce98d(0x189))/0xa)+parseInt(_0x1ce98d(0x17e))/0xb;if(_0x51f5cc===_0x5168e1)break;else _0x4fd63b['push'](_0x4fd63b['shift']());}catch(_0x5e5e42){_0x4fd63b['push'](_0x4fd63b['shift']());}}}(_0x4a71,0x2d17d));function _0x4a71(){var _0x3c7738=['1042866hRelal','assets/bma-1.jpg','1980KFhgAq','9889044SfuoRi','2440HSOmtk','Scene\x202','389MgmlKE','Scene\x203','Virtual\x20Tour','6622qkfVPz','652923bHrZRX','1160516bfZhiE','872cjSyft','1864RVNhMW','20cQEVJa'];_0x4a71=function(){return _0x3c7738;};return _0x4a71();}var viewer=pannellum['viewer']('panorama',{'default':{'firstScene':'scene1','author':_0x52ed35(0x183),'sceneFadeDuration':0x3e8,'autoLoad':!![],'showFullscreenCtrl':![]},'scenes':{'scene1':{'title':'Scene\x201','panorama':'assets/alma.jpg','pitch':0x0,'yaw':0x0,'hfov':0x6e},'scene2':{'title':_0x52ed35(0x180),'panorama':_0x52ed35(0x17c),'pitch':0x0,'yaw':0x0,'hfov':0x6e},'scene3':{'title':_0x52ed35(0x182),'panorama':'assets/bma-0.jpg','pitch':0x0,'yaw':0x0,'hfov':0x6e}}});
+        function openModal(event, args) {
+            document.getElementById('modalImage').src = args.imgSrc;
+            document.getElementById('modalCaption').innerText = args.caption;
+            $('#fullscreenModal').modal('show');
+        }
+
+        function closeModal() {
+            $('#fullscreenModal').modal('hide');
+        }
+
+        function switchScene(sceneId) {
+            viewer.loadScene(sceneId);
+        }
+
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('collapsed');
+        }
+
+       
+
+        function toggleGroup(element) {
+        }
+
+        // Auto-hide menu after a period of inactivity
+        var menuTimeout;
+        function resetMenuTimeout() {
+            clearTimeout(menuTimeout);
+            document.getElementById('menu').classList.remove('hidden');
+            menuTimeout = setTimeout(function() {
+                document.getElementById('menu').classList.add('hidden');
+            }, 1000); // Hide menu after 5 seconds of inactivity
+        }
+
+        /* Get the documentElement (<html>) to display the page in fullscreen */
+        var elem = document.documentElement;
+
+        /* View in fullscreen */
+        function openFullscreen() {
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+          }
+        }
+
+        /* Close fullscreen */
+        function closeFullscreen() {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+          } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+          }
+        }
+        window.onload = function() {
+            resetMenuTimeout();
+            toggleMenu();
+            openFullscreen();
+        }
+    </script>
+</body>
+</html>

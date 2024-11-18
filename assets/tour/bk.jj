@@ -1,0 +1,35 @@
+// var viewer = pannellum.viewer('panorama', {
+//     default: {
+//         firstScene: 'scene1',
+//         author: 'Virtual Tour',
+//         sceneFadeDuration: 1000,
+//         autoLoad: true,
+//         showFullscreenCtrl: false // Disable the fullscreen control button
+//     },
+//     scenes: {
+//         scene1: {
+//             title: 'Scene 1',
+//             panorama: 'assets/alma.jpg',
+//             pitch: 0,
+//             yaw: 0,
+//             hfov: 110
+            
+//         },
+//         scene2: {
+//             title: 'Scene 2',
+//             panorama: 'assets/bma-1.jpg',
+//             pitch: 0,
+//             yaw: 0,
+//             hfov: 110
+            
+//         },
+//         scene3: {
+//             title: 'Scene 3',
+//             panorama: 'assets/bma-0.jpg',
+//             pitch: 0,
+//             yaw: 0,
+//             hfov: 110
+            
+//         }
+//     }
+// });
